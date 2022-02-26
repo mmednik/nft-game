@@ -12,6 +12,7 @@ contract SevenLegendaryMonsters {
         uint256 attackDamage;
         uint256 defense;
         uint256 criticChance;
+        uint256 evasionChance;
     }
 
     CharacterAttributes[] defaultCharacters;
@@ -22,7 +23,8 @@ contract SevenLegendaryMonsters {
         uint256[] memory characterHp,
         uint256[] memory characterAttackDmg,
         uint256[] memory characterDefense,
-        uint256[] memory characterCriticChance
+        uint256[] memory characterCriticChance,
+        uint256[] memory characterEvasionChance
     ) {
         for (uint256 i = 0; i < characterNames.length; i += 1) {
             defaultCharacters.push(
@@ -34,7 +36,8 @@ contract SevenLegendaryMonsters {
                     maxHp: characterHp[i],
                     attackDamage: characterAttackDmg[i],
                     defense: characterDefense[i],
-                    criticChance: characterCriticChance[i]
+                    criticChance: characterCriticChance[i],
+                    evasionChance: characterEvasionChance[i]
                 })
             );
 
@@ -45,7 +48,8 @@ contract SevenLegendaryMonsters {
                 c.hp,
                 c.imageURI,
                 c.defense,
-                c.criticChance
+                c.criticChance,
+                c.evasionChance
             );
         }
     }
