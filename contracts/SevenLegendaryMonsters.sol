@@ -43,13 +43,10 @@ contract SevenLegendaryMonsters {
 
             CharacterAttributes memory c = defaultCharacters[i];
             console.log(
-                "Done initializing %s w/ HP %s, img %s, def %s, crit %s",
+                "Done initializing %s w/ HP %s, img %s",
                 c.name,
                 c.hp,
-                c.imageURI,
-                c.defense,
-                c.criticChance,
-                c.evasionChance
+                c.imageURI
             );
         }
     }

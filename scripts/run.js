@@ -1,7 +1,5 @@
 const main = async () => {
-  const gameContractFactory = await hre.ethers.getContractFactory(
-    "SevenLegendaryMonsters"
-  );
+  const gameContractFactory = await hre.ethers.getContractFactory("SevenLegendaryMonsters");
   const gameContract = await gameContractFactory.deploy(
     // Names
     [
@@ -25,11 +23,11 @@ const main = async () => {
       "https://i.postimg.cc/52Fkt7T8/lobison.png",
     ],
 
-    [300, 250, 250, 200, 250, 300, 250], // HP values
-    [50, 65, 55, 50, 50, 60, 55], // Attack damage values
-    [100, 80, 90, 100, 100, 90, 80], // Defense values
+    [350, 250, 250, 200, 250, 300, 250], // HP values
+    [50, 65, 55, 50, 50, 70, 55], // Attack damage values
+    [150, 80, 90, 100, 100, 90, 80], // Defense values
     [10, 5, 3, 1, 1, 10, 5], // Critical chance values
-    [5, 5, 5, 20, 15, 5, 30], // Evasion chance values
+    [0, 5, 20, 15, 0, 10, 10], // Evasion chance values
   );
   await gameContract.deployed();
   console.log("Contract deployed to:", gameContract.address);
