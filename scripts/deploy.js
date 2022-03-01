@@ -35,7 +35,7 @@ const main = async () => {
   let txn;
 
   for (let i = 0; i < 7; i++) {
-    xn = await gameContract.mintCharacterNFT(i);
+    txn = await gameContract.mintCharacterNFT(i);
     await txn.wait();
     console.log(`Minted NFT #${i+1}`);
   }
