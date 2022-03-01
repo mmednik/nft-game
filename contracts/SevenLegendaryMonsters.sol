@@ -225,4 +225,8 @@ contract SevenLegendaryMonsters is ERC721 {
     function getAllDefaultCharacters() public view returns (CharacterAttributes[] memory) {
         return defaultCharacters;
     }
+
+    function getBigBoss() public view returns (BigBoss memory) {
+        return bigBoss;
+    }
 }
