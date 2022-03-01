@@ -28,6 +28,10 @@ const main = async () => {
     [150, 80, 90, 100, 100, 90, 80], // Defense values
     [10, 5, 3, 1, 1, 10, 5], // Critical chance values
     [0, 5, 20, 15, 0, 10, 10], // Evasion chance values
+    "Tau",
+    "https://i.postimg.cc/dtfxwPHq/tau.png",
+    10000,
+    50
   );
   await gameContract.deployed();
   console.log("Contract deployed to:", gameContract.address);
